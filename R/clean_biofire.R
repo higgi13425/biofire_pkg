@@ -4,7 +4,6 @@
 # dependencies
 # tidyverse, stringr, lubridate, readr, pdftools
 
-# function clean_biofire_pdf, for cleaning .txt files from biofire machine
 # test file is here:
 # file <- "~/Documents/Rcode/biofire/lab_biofire_results_txt/FilmArray_Run_Date_2017_08_04_Sample_3113_SN_09937650.txt"
 
