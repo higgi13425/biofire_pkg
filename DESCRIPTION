@@ -7,3 +7,9 @@ Depends: R (>= 3.4.4)
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+Imports:
+	tidyverse,
+	stringr, 
+	readr,
+  lubridate, 
+  pdftools
