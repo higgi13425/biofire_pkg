@@ -8,15 +8,22 @@
 # test file is here:
 # file <- "~/Documents/Rcode/biofire/lab_biofire_results_txt/FilmArray_Run_Date_2017_08_04_Sample_3113_SN_09937650.txt"
 
-# requires packages tidyverse, stringr, readr
-# lubridate, pdftools
-
 
 # function clean_biofire_pdf, for cleaning pdf files
 # from biofire machine
 # requires packages pdftools, stringr, tidyr
 # test file is here:
 # file <- "~/Documents/Rcode/biofire/lab_biofire_results_pdf/FilmArray_Run_Date_2017_06_27_Sample_153_SN_09937928.pdf"
+
+
+#' Read a Biofire GI PDF file to a dataframe
+#'
+#' This function loads a Biofire GI PDF output file.
+#' It opens it with pdftools, uses regex to extract the results
+#' and formats the output as a dataframe
+#'
+#' @param infile Path to the input PDF file
+#' @return A dataframe of the results
 #' @export
 clean_biofire_pdf <- function(file){
   pdtext<- pdf_text(file)
@@ -31,7 +38,14 @@ clean_biofire_pdf <- function(file){
   text2
 }
 
-#now clean_biofire_txt for cleaning from *.txt
+#' Read a Biofire GI text file to a dataframe
+#'
+#' This function loads a Biofire GI text output file.
+#' It opens it with pdftools, uses regex to extract the results
+#' and formats the output as a dataframe
+#'
+#' @param infile Path to the input text file
+#' @return A dataframe of the results
 #' @export
 clean_biofire_txt <- function(file){
   lns<- readLines(file)
