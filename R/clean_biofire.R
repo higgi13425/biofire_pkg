@@ -23,7 +23,7 @@
 #'
 #' @param infile Path to the input PDF file
 #' @return A dataframe of the results
-#' @export
+#' @export clean_biofire_pdf
 clean_biofire_pdf <- function(file){
   pdtext<- pdf_text(file)
   text2<- str_extract(pdtext, "Bacteria\n[\\s\\S]*Sapovirus")
@@ -45,7 +45,7 @@ clean_biofire_pdf <- function(file){
 #'
 #' @param infile Path to the input text file
 #' @return A dataframe of the results
-#' @export
+#' @export clean_biofire_txt
 clean_biofire_txt <- function(file){
   lns<- readLines(file)
   df <- read.csv(text=lns, stringsAsFactors=FALSE, skip = 8L, strip.white = TRUE)
